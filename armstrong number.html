@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Number=parseInt(prompt("plese enter A number"))
+        temp=Number;
+        var sum=0;
+        nofodigit=Number.toString().length;
+
+        while(temp>0){
+            var digit= temp%10;
+            sum +=digit**nofodigit;
+            temp=parseInt(temp/10);
+        }
+        if(sum==Number){
+            alert(Number+" "+"is a Armstrong numbar")
+        }
+        else{
+            alert(Number+"Not A airmstrong number")
+        }
+    </script>
+</body>
+</html>
