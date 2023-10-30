@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Of Circle</title>
+    <style>
+        fieldset{
+            text-align: center;
+            width: 500px;
+            height: 500px;
+            border-color:blue ;
+            border-width: 6px;
+            border-style: outset;
+            border-radius: 50%;
+            background-color: wheat;
+        }
+        h1{
+            color: rgb(9, 197, 141);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-shadow: 4px 2px 2px black;
+            font-variant: small-caps;
+            font-size:50px;
+        }
+
+        h2{
+            text-align: center;
+            color: red;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-variant: small-caps;
+        }
+        #btn{
+            height: 80px;
+            width: 80px;
+            color: blueviolet;
+            font-weight: bolder;
+            border: 2px solid green;
+            border-radius: 50%;
+
+        }
+        #btn:hover{
+            background-color: red;
+        }
+        #radius_in{
+            width: 350px;
+            height: 30px;
+        }
+        #radius_in:hover{
+            color: whitesmoke;
+            background-color: rgb(9, 9, 9);
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+    <fieldset><br><br>
+    <h1>Area Of Circle</h1>
+    <hr><br>
+
+    <label for="radius"><b>Enter The Radius of Circle :</b> </label><br><br>
+    <input type="number" id="radius_in" placeholder="Radius" required><br><br><br>
+
+    <button onclick="CalculateCircle()" id="btn">Calculate</button>
+    <h2 id="result"></h2>
+
+    
+</fieldset>
+</center>
+<script>
+    function CalculateCircle(){
+        let radius=parseFloat(document.getElementById("radius_in").value);
+        let pi=3.14
+        
+        let Area_Of_Circle=Math.round(pi*radius*radius) ;
+
+        document.getElementById("result").innerHTML="Area Of Circle is : "+Area_Of_Circle;
+    }
+</script>
+</body>
+</html>

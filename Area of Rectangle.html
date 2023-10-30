@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            text-align: center;
+            width: 300px;
+            height: 400px;
+            border-color:rgb(10, 234, 74) ;
+            border-width: 6px;
+            border-style: outset;
+            border-radius: 16px;
+            background-color:azure;
+            
+        }
+        h1{
+            color: rgb(58, 21, 221);
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 4px 2px 2px black;
+            font-variant: small-caps;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <fieldset>
+    <h1>Area Of Rectangle</h1>
+    <hr><br>
+    <label for="len"><b>Enter The Length :</b> </label><br><br>
+    <input type="number" id="length" placeholder="length" required><br><br><br>
+    <label for=" width"><b>Enter The  width :</b></label><br><br>
+    <input type="number" id="width" placeholder=" width " required><br><br>
+    <button onclick="CalculateArea()">Calculate</button>
+    <p id="result"></p>
+
+</fieldset>
+</center>
+<script>
+    function CalculateArea(){
+        let length=parseFloat(document.getElementById("length").value);
+        let width=parseFloat(document.getElementById("width").value);
+        
+        let Area=Math.round(length)*(width);
+
+        document.getElementById("result").innerHTML="Area Of Rectangle is :"+Area +" CM";
+    }
+</script>
+</body>
+</html>
